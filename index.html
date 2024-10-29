@@ -3,47 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spooky Tech</title>
+  <title>Spooky Tech - Dropshipping Store</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="https://freeleodrop.github.io/">Home</a></li>
+      <li><a href="https://freeleodrop.github.io/setting.html">Settings</a></li>
+      <li><a href="mailto:obioraokafor370@gmail.com">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header Section -->
   <header>
-    <h1>🎃 Spooky Tech 👻</h1>
+    <h1>🎃 Welcome to Spooky Tech 👻</h1>
+    <p>Your ultimate spooky tech shopping destination.</p>
     <div class="search-container">
       <input type="text" id="searchBar" placeholder="Search for products...">
-      <button onclick="searchProducts()">🔍</button>
+      <button onclick="searchProducts()">🔍 Search</button>
     </div>
   </header>
 
+  <!-- Sidebar and Main Content -->
   <div class="container">
     <aside>
       <h2>Categories</h2>
       <ul>
-        <li onclick="filterCategory('Gift Cards')">Gift Cards</li>
-        <li onclick="filterCategory('AirPods')">AirPods</li>
-        <li onclick="filterCategory('MacBook Accessories')">MacBook Accessories</li>
-        <li onclick="filterCategory('Fun Items')">Fun Items</li>
-        <li onclick="filterCategory('Bundles')">Bundles</li>
+        <li><button onclick="filterCategory('AirPods')" class="glow-btn">AirPods</button></li>
+        <li><button onclick="filterCategory('MacBook')" class="glow-btn">MacBook</button></li>
+        <li><button onclick="filterCategory('Apple Accessories')" class="glow-btn">Apple Accessories</button></li>
+        <li><button onclick="filterCategory('Charging Bundles')" class="glow-btn">Charging Bundles</button></li>
       </ul>
     </aside>
 
     <main>
       <h2>Featured Products</h2>
       <div id="productGrid">
-        <!-- Example product structure -->
+        <!-- Example products -->
         <div class="product-card">
           <img src="airpods.jpg" alt="AirPods">
           <h3>AirPods</h3>
           <p>$99.99</p>
-          <button>Add to Cart</button>
+          <button class="glow-btn">Add to Cart</button>
         </div>
-        <!-- More products will populate dynamically -->
+        <div class="product-card">
+          <img src="macbook.jpg" alt="MacBook">
+          <h3>MacBook</h3>
+          <p>$1299.99</p>
+          <button class="glow-btn">Add to Cart</button>
+        </div>
       </div>
     </main>
   </div>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2024 Spooky Tech</p>
+    <p>&copy; 2024 Spooky Tech. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
