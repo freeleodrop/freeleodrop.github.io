@@ -1,9 +1,11 @@
+// Product Data
 const products = [
   { name: 'AirPods', category: 'AirPods', price: 99.99, img: 'airpods.jpg' },
-  { name: 'Apple Gift Card', category: 'Gift Cards', price: 25.00, img: 'giftcard.jpg' },
-  { name: 'MacBook Stand', category: 'MacBook Accessories', price: 49.99, img: 'macbookstand.jpg' }
+  { name: 'MacBook', category: 'MacBook', price: 1299.99, img: 'macbook.jpg' },
+  { name: 'MacBook Charger', category: 'Charging Bundles', price: 49.99, img: 'macbook_charger.jpg' }
 ];
 
+// Render Products
 function renderProducts(filteredProducts) {
   const productGrid = document.getElementById('productGrid');
   productGrid.innerHTML = '';
@@ -15,12 +17,13 @@ function renderProducts(filteredProducts) {
       <img src="${product.img}" alt="${product.name}">
       <h3>${product.name}</h3>
       <p>$${product.price.toFixed(2)}</p>
-      <button>Add to Cart</button>
+      <button class="glow-btn">Add to Cart</button>
     `;
     productGrid.appendChild(productCard);
   });
 }
 
+// Search Functionality
 function searchProducts() {
   const query = document.getElementById('searchBar').value.toLowerCase();
   const filteredProducts = products.filter(product =>
@@ -35,6 +38,7 @@ function searchProducts() {
   }
 }
 
+// Category Filter
 function filterCategory(category) {
   const filteredProducts = products.filter(product => product.category === category);
   renderProducts(filteredProducts);
