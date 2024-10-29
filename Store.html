@@ -1,1 +1,38 @@
-hi
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spooky Tech</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Spooky Tech</h1>
+    <input type="text" id="searchBar" placeholder="Search for products...">
+    <button onclick="searchProducts()">Search</button>
+  </header>
+  
+  <div class="container">
+    <aside>
+      <h2>Categories</h2>
+      <ul>
+        <li>Gift Cards</li>
+        <li>AirPods</li>
+        <li>MacBook Accessories</li>
+        <li>Fun Items</li>
+        <li>Bundles</li>
+      </ul>
+    </aside>
+
+    <main>
+      <h2>Featured Products</h2>
+      <div id="productGrid">
+        <!-- Product items go here -->
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
