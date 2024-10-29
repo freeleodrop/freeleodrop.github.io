@@ -1,1 +1,80 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1c1c1c;
+  color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #333;
+  color: #f39c12;
+  padding: 15px;
+  text-align: center;
+}
+
+#searchBar {
+  padding: 5px;
+  margin-left: 10px;
+}
+
+button {
+  background-color: #f39c12;
+  color: #1c1c1c;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+}
+
+aside {
+  width: 200px;
+  background-color: #444;
+  color: #fff;
+  padding: 20px;
+}
+
+aside ul {
+  list-style: none;
+}
+
+aside ul li {
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+aside ul li:hover {
+  color: #f39c12;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+  background: rgba(255, 138, 0, 0.1);
+}
+
+#productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+footer {
+  background-color: #333;
+  text-align: center;
+  padding: 10px;
+  color: #f39c12;
+}
